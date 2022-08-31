@@ -1,0 +1,307 @@
+* {
+    background: rgb(216, 215, 199);
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    display: grid;
+    grid-template-columns: 22% 1fr;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+.rsidebar {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    top: 0;
+    position: sticky;
+}
+.rsidebar * , .rsidebar{
+    background-color: rgb(80, 163, 237);
+}
+.rsidebar > div > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    justify-items: center;
+    margin-bottom: 8%;
+}
+.rsidebar > div > div > div,.rsidebar > div > div > h3 {
+    align-self: center;
+    justify-self: left;
+}
+.rsidebar div img {
+    height: 30px;
+}
+.rsidebar > div > .dashboard > img {
+    height: 50px;
+}
+.user div *, .support div *{
+    transition: 0.3s ease all;
+}
+.user div:hover > *,
+.support div:hover > * {
+    cursor: pointer;
+    transform: translateX(-3px) translateY(-3px);
+}
+
+/* head */
+
+.content .head {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+}
+.content .head, .content .head *{
+    background-color: bisque;
+}
+.content .head .lhead img {
+    height: 80px;
+    border-radius: 50%;
+}
+.content .head .rhead img:last-of-type{
+    height: 50px;
+    border-radius: 50%;
+}
+.content .head .lhead {
+    flex: 1.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content .head .lhead label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.content .head .lhead input {
+    width: 80%;
+    height: 40px;
+    border: 2px solid rgb(128, 184, 119);
+    border-radius: 10px;
+    align-self: center;
+    background: whitesmoke;
+    padding-left: 15px;
+    font-size: 20px;
+}
+.content .head .lhead input:focus{
+    outline: none;
+    border: 2px solid violet;
+    box-shadow: 0px 0px 5px rgb(252, 252, 189)
+}
+.content .head .lhead > div {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start ;
+    height: 100%;
+    grid-template: auto 1fr/auto 1fr;
+    margin-top: 20px;
+}
+.content .head .lhead div > img {
+    margin-right: 10px;
+}
+.content .head .lhead div p {
+    font-size: large;
+    margin: 5px;
+}
+
+.content .head .rhead {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.content .head .rhead .rheadtop {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+.content .head .rhead .rheadbottom {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+.content .head .rhead .rheadbottom button {
+    border: none;
+    background: rgb(85, 99, 222);
+    color: white;
+    font-weight: bold;
+    width: 25%;
+    height: 25%;
+    border-radius: 10px;
+    box-shadow: 5px 5px #888888;
+    transition: 0.2s all;
+    border: 1px solid silver;
+}
+.content .head .rhead .rheadbottom button:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px #888888;
+}
+.content .head .rhead .rheadbottom button:active{
+    cursor: pointer;
+    color: #888888;
+    box-shadow: none;
+}
+.contents {
+    display: flex;
+    margin: 0 5% 0 5%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.contents .midcontent {
+    width: 200%;
+}
+.contents .midcontent h3 {
+    margin: 5% 0 0 5%;
+}
+.contents .midcontent .gridcontent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 5%;
+}
+.contents .midcontent .gridcontent > div {
+    background-color: whitesmoke;
+    border-radius: 15px;
+    height: 200px;
+    border-left: 15px solid rgb(161, 161, 89);
+    transition: 0.5s ease all;
+    box-shadow: 1px 1px #c0bebe;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.contents .midcontent .gridcontent > div div {
+    background: whitesmoke;
+    padding: 0 5% 0 5%;
+}
+.contents .midcontent .gridcontent > div .icons {
+    align-self: flex-end;
+}
+.contents .midcontent .gridcontent > div .icons img{
+    height: 20px;
+    margin: 5px;
+    background: whitesmoke;
+    transition: 0.5s ease all;
+}
+.contents .midcontent .gridcontent > div .icons img:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+}
+.contents .midcontent .gridcontent div div * {
+    background: whitesmoke;
+}
+.contents .midcontent .gridcontent > div:hover {
+    border-left: 15px solid green;
+    transform: translateX(-5px) translateY(-5px);
+    box-shadow: 5px 5px #c0bebe;
+}
+.contents .rcontent {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+.contents .rcontent > div {
+    margin: 0 5% 0 0;
+    width: 85%;
+    height:auto;
+}
+.contents .rcontent > div > div{
+    height: fit-content;
+    padding: 5%;
+    background: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 2px 2px #979797;
+    width: 100%;
+}
+.content .rcontent div div div, .rcontent div div div * {
+    background: whitesmoke;
+}
+.rcontent div div div h5 {
+    margin-bottom: 0px;
+}
+.rcontent div div div p {
+    margin-top: 5px;
+    font-size: 12px;
+}
+.rcontent div .announcements div:not(:last-child) {
+    border-bottom: 1px solid rgb(167, 166, 166);
+}
+.trending > div {
+    padding: 5%;
+    display: flex;
+}
+.trending img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.trending p{
+    padding-left: 10px;
+}
+.trending p:first-of-type{
+    font-weight: bold;
+}
+
+@media (max-width: 1000px) {
+    .contents {
+        flex-wrap: wrap;
+    }
+    .body{
+        grid-template-columns: 100px 1fr
+    }
+    .rsidebar div div div, .rsidebar div div h3 {
+        display: none;
+    }
+    .rsidebar .user {
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .rsidebar .support {
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .head {
+        flex-direction: column-reverse;
+    }
+    .content .head .lhead input{
+        width: 80%;
+    }
+    .content .head .lhead div:first-of-type{
+        position: absolute;
+        display: none;
+    }
+    .content .head .rhead .rheadbottom button {
+        width: 20%;
+        height: 30px;
+        margin: 5px 0 5px 0;
+    }
+    .rheadtop img:first-child {
+        display: none
+    }
+    .rheadtop {
+        padding: 10px;
+        margin-bottom: 10px 0 10px 0;
+    }
+}
